@@ -25,4 +25,6 @@ jobs:
           python -m venv .venv
           . .venv/bin/activate
           pip install -r requirements.txt -c constraints.txt
-  
+
+      - name: run shell commands
+        run: python hello_world.py
