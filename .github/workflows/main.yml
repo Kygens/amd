@@ -18,12 +18,11 @@ jobs:
         with:
           # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
           python-version: 3.8
-          
-      - name: restore or create a python virtualenv
-        uses: syphar/restore-virtualenv@v1
-        with:
-          # requirements-files to use for building the cache key
-          requirement_files: |
-            requirements.txt
-            constraints.txt
-            
+          cache: pip
+        
+      - name: Activate venv and install requirements
+        run: |
+          python -m venv .venv
+          . venv/bin/activate
+          pip install -r requirements.txt -c constraints.txt
+  
