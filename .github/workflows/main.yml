@@ -18,8 +18,6 @@ jobs:
         with:
           # Version range or exact version of Python or PyPy to use, using SemVer's version range syntax. Reads from .python-version if unset.
           python-version: 3.8
-          # Used to specify a package manager for caching in the default directory. Supported values: pip, pipenv, poetry.
-          cache: pip
           
       - name: restore or create a python virtualenv
         uses: syphar/restore-virtualenv@v1
