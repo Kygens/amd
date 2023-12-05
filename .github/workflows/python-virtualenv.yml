@@ -24,9 +24,9 @@ jobs:
           python -m venv .venv
           . .venv/bin/activate
           pip install -r requirements.txt -c constraints.txt
+          black hello_world.py
           flake8 hello_world.py
           isort .
-          black hello_world.py
-
+          
       - name: run shell commands
         run: python hello_world.py
