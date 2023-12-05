@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Update task in Repo A
+      - name: Update task in mentioned repository
         run: |
           # Install necessary dependencies
           sudo apt-get install jq curl
